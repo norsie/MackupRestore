@@ -2,12 +2,13 @@
 Clean Macbook installation with Mackup restore
 
 ### Just run the `setupmacbook.sh` script AFTER:
-1. Hardlinking current settings- and config files to iCloud using Mackup (https://github.com/lra/mackup)
-2. Running a clean MacOS installation
-3. Logging into iCloud
-4. Manually installing the latest Xcode (https://developer.apple.com/download/) 
+1. Cloning this repo onto iCloud
+2. Hardlinking current settings- and config files to iCloud using Mackup (https://github.com/lra/mackup)
+3. Running a clean MacOS installation
+4. Logging into iCloud
 
 ### This script will Install the following tools and software:
+- Xcode
 - Homebrew
   - Brave Browser
   - Firefox
