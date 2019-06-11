@@ -1,0 +1,346 @@
+# Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew doctor
+brew tap homebrew/cask-versions
+
+# App Store apps
+brew install mas
+mas install 497799835 # Xcode
+
+# Browsers
+brew cask install brave-browser
+brew cask install firefox
+
+# Python
+brew install python
+
+# AWSCLI
+brew install awscli
+
+# GIT
+brew install git
+
+# Packer
+brew install packer
+
+# iTerm2
+brew cask install iterm2
+
+# OhMyZsh
+brew install zsh
+
+# SublimeText editor
+brew cask install sublime-text
+
+# Boostnote
+brew cask install boostnote
+
+# Authy authenticator
+brew cask install authy
+
+# Yubico authenticator
+brew cask install homebrew/cask-drivers/yubico-authenticator
+
+# Lastpass
+brew cask install lastpass
+
+# Slack
+brew cask install slack
+
+# Caffeine
+echo "~~Slurp~~"
+brew cask install caffeine
+
+# Aerial ScreenSaver
+brew cask install aerial
+
+# Mackup
+# README > https://github.com/lra/mackup#quickstart
+brew install mackup
+
+# Whatsapp
+brew cask install whatsapp
+
+# Media
+brew cask install plex-media-player
+brew cask install spotify
+brew cask install steam
+brew cask install vlc
+
+# Dropbox
+brew cask install dropbox
+
+# Logitech Options
+brew cask install homebrew/cask-drivers/logitech-options
+
+
+# CONFIGURATION
+# #############
+ 
+## Setup Mackup (to iCloud)
+## README > https://github.com/lra/mackup/blob/master/doc/README.md
+echo "--> Creating config file for Mackup .."
+cat <<EOF >~/.mackup.cfg
+[storage]
+engine = icloud
+directory = .config/mackup
+
+[applications_to_ignore]
+aws
+EOF
+
+## Setup SublimeText
+
+
+## Setup VIM (dotfiles)
+echo "--> setting up VIM dotfiles .."
+git clone https://bitbucket.org/mvanbaak/dotfiles.vim.git ~/.vim
+if type git &>/dev/null
+then
+    # install Vundle
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+    # if we have vim, run PluginInstall to get all plugins managed by vundle
+    if type vim &>/dev/null
+    then
+        vim +PluginInstall +qall
+    else
+        echo "Vim is not installed"
+        exit 1
+    fi
+    # Fix ~/.vimrc
+    if [ -f ~/.vimrc ]
+    then
+        mv ~/.vimrc ~/.vimrc.backup.denneg
+    fi
+    echo "source ~/.vim/vimrc" > ~/.vimrc
+else
+    echo "Git is not installed"
+    exit 1
+fi
+
+## Setup ZSH (dotfiles)
+echo "--> setting up ZSH dotfiles .."
+git clone https://bitbucket.org/mvanbaak/dotfiles.zsh.git ~/.zsh
+    # Fix ~/.zshrc
+    if [ -f ~/.zshrc ]
+    then
+        mv ~/.zshrc ~/.zshrc.backup.denneg
+    fi
+    echo "source ~/.zsh/zshrc" > ~/.zshrc
+
+    # Fix ~/.zshenv
+    if [ -f ~/.zshenv ]
+    then
+        mv ~/.zshenv ~/.zshenv.backup.denneg
+    fi
+    echo "source ~/.zsh/zshenv" > ~/.zshenv
+
+
+## Setup Finder
+echo "--> setting up Finder layout .."
+defaults write com.apple.finder ShowStatusBar -bool TRUE
+defaults write com.apple.finder ShowPathbar -bool TRUE
+defaults write com.apple.finder ShowSidebar -bool TRUE
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool TRUE
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool TRUE
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool TRUE
+defaults write com.apple.finder NewWindowTarget PfHm
+defaults write com.apple.finder NewWindowTargetPath file://$HOME
+defaults write com.apple.finder DesktopViewSettings "{
+    IconViewSettings =     {
+        arrangeBy = name;
+        backgroundColorBlue = 1;
+        backgroundColorGreen = 1;
+        backgroundColorRed = 1;
+        backgroundType = 0;
+        gridOffsetX = 0;
+        gridOffsetY = 0;
+        gridSpacing = 85;
+        iconSize = 64;
+        labelOnBottom = 0;
+        showIconPreview = 1;
+        showItemInfo = 1;
+        textSize = 12;
+        viewOptionsVersion = 1;
+    };
+}"
+defaults write com.apple.finder StandardViewSettings "{
+    ExtendedListViewSettingsV2 =     {
+        calculateAllSizes = 0;
+        columns =         (
+                        {
+                ascending = 1;
+                identifier = name;
+                visible = 1;
+                width = 300;
+            },
+                        {
+                ascending = 0;
+                identifier = ubiquity;
+                visible = 0;
+                width = 35;
+            },
+                        {
+                ascending = 0;
+                identifier = dateModified;
+                visible = 1;
+                width = 181;
+            },
+                        {
+                ascending = 0;
+                identifier = dateCreated;
+                visible = 0;
+                width = 181;
+            },
+                        {
+                ascending = 0;
+                identifier = size;
+                visible = 1;
+                width = 97;
+            },
+                        {
+                ascending = 1;
+                identifier = kind;
+                visible = 1;
+                width = 115;
+            },
+                        {
+                ascending = 1;
+                identifier = label;
+                visible = 0;
+                width = 100;
+            },
+                        {
+                ascending = 1;
+                identifier = version;
+                visible = 0;
+                width = 75;
+            },
+                        {
+                ascending = 1;
+                identifier = comments;
+                visible = 0;
+                width = 300;
+            },
+                        {
+                ascending = 0;
+                identifier = dateLastOpened;
+                visible = 0;
+                width = 200;
+            },
+                        {
+                ascending = 0;
+                identifier = dateAdded;
+                visible = 0;
+                width = 181;
+            }
+        );
+        iconSize = 16;
+        showIconPreview = 1;
+        sortColumn = name;
+        textSize = 12;
+        useRelativeDates = 1;
+        viewOptionsVersion = 1;
+    };
+    GalleryViewSettings =     {
+        arrangeBy = name;
+        iconSize = 48;
+        showIconPreview = 1;
+        viewOptionsVersion = 1;
+    };
+    IconViewSettings =     {
+        arrangeBy = none;
+        backgroundColorBlue = 1;
+        backgroundColorGreen = 1;
+        backgroundColorRed = 1;
+        backgroundType = 0;
+        gridOffsetX = 0;
+        gridOffsetY = 0;
+        gridSpacing = 54;
+        iconSize = 64;
+        labelOnBottom = 1;
+        showIconPreview = 1;
+        showItemInfo = 0;
+        textSize = 12;
+        viewOptionsVersion = 1;
+    };
+    ListViewSettings =     {
+        calculateAllSizes = 0;
+        columns =         {
+            comments =             {
+                ascending = 1;
+                index = 7;
+                visible = 0;
+                width = 300;
+            };
+            dateCreated =             {
+                ascending = 0;
+                index = 2;
+                visible = 0;
+                width = 181;
+            };
+            dateLastOpened =             {
+                ascending = 0;
+                index = 8;
+                visible = 0;
+                width = 200;
+            };
+            dateModified =             {
+                ascending = 0;
+                index = 1;
+                visible = 1;
+                width = 181;
+            };
+            kind =             {
+                ascending = 1;
+                index = 4;
+                visible = 1;
+                width = 115;
+            };
+            label =             {
+                ascending = 1;
+                index = 5;
+                visible = 0;
+                width = 100;
+            };
+            name =             {
+                ascending = 1;
+                index = 0;
+                visible = 1;
+                width = 300;
+            };
+            size =             {
+                ascending = 0;
+                index = 3;
+                visible = 1;
+                width = 97;
+            };
+            version =             {
+                ascending = 1;
+                index = 6;
+                visible = 0;
+                width = 75;
+            };
+        };
+        iconSize = 16;
+        showIconPreview = 1;
+        sortColumn = name;
+        textSize = 12;
+        useRelativeDates = 1;
+        viewOptionsVersion = 1;
+    };
+    SettingsType = StandardViewSettings;
+}"
+killall Finder
+
+
+# RESTORE Settings
+# ################
+
+### Mackup
+echo "--> Restoring settings via Mackup (iCloud) .." 
+mackup restore
+
+echo "--> All done!"
