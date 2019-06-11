@@ -7,6 +7,7 @@ brew tap homebrew/cask-versions
 # App Store apps
 brew install mas
 mas install 497799835 # Xcode
+sudo xcodebuild -license accept
 
 # Browsers
 brew cask install brave-browser
