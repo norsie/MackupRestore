@@ -82,7 +82,7 @@ brew cask install homebrew/cask-drivers/logitech-options
 ## Setup Mackup (to iCloud)
 ## README > https://github.com/lra/mackup/blob/master/doc/README.md
 echo "--> Creating config file for Mackup .."
-cat <<EOF >"~/.mackup.cfg"
+cat <<EOF >~/.mackup.cfg
 [storage]
 engine = icloud
 directory = .config/mackup
@@ -94,7 +94,7 @@ EOF
 
 ## Setup SublimeText
 echo "--> Creating package file for SublimeText .."
-cat <<EOF >"~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+cat <<EOF >~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package Control.sublime-settings
 {
 	"bootstrapped": true,
 	"in_process_packages":
@@ -124,7 +124,7 @@ cat <<EOF >"~/Library/Application Support/Sublime Text 3/Packages/User/Package C
 EOF
 
 echo "--> Creating preference file for SublimeText .."
-cat <<EOF >"~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+cat <<EOF >~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings
 {
   "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
   "font_size": 13,
