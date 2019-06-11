@@ -1,3 +1,20 @@
+#!/bin/sh
+# Initial MacBook installation, configuration and restoration of backed up settings (done with Mackup)
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# SSH
+echo -n "--> Do you want to generate a SSH key? (y/n)"
+read answer
+
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo "--> Generating SSH key .."
+    ssh-keygen
+else
+    echo "--> Skipping key generation .."
+fi
+
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
@@ -94,7 +111,7 @@ EOF
 
 ## Setup SublimeText
 echo "--> Creating package file for SublimeText .."
-cat <<EOF >~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package \Control.sublime-settings
+cat <<EOF >~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/"Package Control.sublime-settings"
 {
 	"bootstrapped": true,
 	"in_process_packages":
