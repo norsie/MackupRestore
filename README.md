@@ -4,7 +4,8 @@ Clean Macbook installation with Mackup restore
 ### This script can be run after:
 1. Hardlinking current settings- and config files to iCloud using Mackup (https://github.com/lra/mackup)
 2. Running a clean MacOS installation
-3. Manually installing the latest Xcode (https://developer.apple.com/download/) 
+3. Logging into iCloud
+4. Manually installing the latest Xcode (https://developer.apple.com/download/) 
 
 ### This script will Install the following tools and software:
 - Homebrew
