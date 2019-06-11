@@ -94,7 +94,7 @@ EOF
 
 ## Setup SublimeText
 echo "--> Creating package file for SublimeText .."
-cat <<EOF >~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package Control.sublime-settings
+cat <<EOF >~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Package \Control.sublime-settings
 {
 	"bootstrapped": true,
 	"in_process_packages":
