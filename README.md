@@ -1,7 +1,7 @@
 # MackupRestore
 Clean Macbook installation with Mackup restore
 
-### This script can be run after:
+### Just run the `setupmacbook.sh` script AFTER:
 1. Hardlinking current settings- and config files to iCloud using Mackup (https://github.com/lra/mackup)
 2. Running a clean MacOS installation
 3. Logging into iCloud
