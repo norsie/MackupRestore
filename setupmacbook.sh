@@ -81,7 +81,7 @@ brew cask install homebrew/cask-drivers/logitech-options
 ## Setup Mackup (to iCloud)
 ## README > https://github.com/lra/mackup/blob/master/doc/README.md
 echo "--> Creating config file for Mackup .."
-cat <<EOF >~/.mackup.cfg
+cat <<EOF >"~/.mackup.cfg"
 [storage]
 engine = icloud
 directory = .config/mackup
@@ -90,7 +90,62 @@ directory = .config/mackup
 aws
 EOF
 
+
 ## Setup SublimeText
+echo "--> Creating package file for SublimeText .."
+cat <<EOF >"~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings"
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"Alignment",
+		"BracketHighlighter",
+		"DocBlockr",
+		"Emmet",
+		"FileDiffs",
+		"GitGutter",
+		"JSONLint",
+		"Material Theme",
+		"Notes",
+		"Package Control",
+		"Project Specific Syntax Settings",
+		"Puppet",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"sublimelint"
+	]
+}
+EOF
+
+echo "--> Creating preference file for SublimeText .."
+cat <<EOF >"~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+{
+  "color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+  "font_size": 13,
+  "ignored_packages":
+  [
+      "Markdown",
+      "Vintage"
+  ],
+  "line-padding-bottom": 3,
+  "line-padding-top": 3,
+  "margin": 0,
+  "material_theme_accent_titlebar": true,
+  "material_theme_compact_panel": true,
+  "material_theme_compact_sidebar": true,
+  "material_theme_contrast_mode": true,
+  "material_theme_small_statusbar": true,
+  "material_theme_small_tab": true,
+  "material_theme_tabs_autowidth": true,
+  "remember_open_files": true,
+  "theme": "Material-Theme.sublime-theme"
+}
+EOF
 
 
 ## Setup VIM (dotfiles)
@@ -119,6 +174,7 @@ else
     echo "Git is not installed"
     exit 1
 fi
+
 
 ## Setup ZSH (dotfiles)
 echo "--> setting up ZSH dotfiles .."
