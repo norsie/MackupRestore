@@ -24,6 +24,8 @@ brew tap homebrew/cask-versions
 # App Store apps
 brew install mas
 mas install 497799835 # Xcode
+echo "--> Pointing xcode-select to the Xcode Developer directory .."
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 sudo xcodebuild -license accept
 
 # Browsers
