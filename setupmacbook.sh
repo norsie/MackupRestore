@@ -116,7 +116,7 @@ EOF
 
 echo "--> Installing Package Control for SublimeText .."
 #~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages -e "$(curl -fsSL https://packagecontrol.io/Package Control.sublime-package)"
-curl --remote-name ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages "https://packagecontrol.io/Package Control.sublime-package"
+curl "https://packagecontrol.io/Package Control.sublime-package" --output ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/"Package Control.sublime-package"
 
 echo "--> Creating package file for SublimeText .."
 cat <<EOF >~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/"Package Control.sublime-settings"
