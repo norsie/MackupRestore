@@ -115,8 +115,7 @@ EOF
 ## Manually install Package Controll > https://packagecontrol.io/installation#st3
 
 echo "--> Installing Package Control for SublimeText .."
-#~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages -e "$(curl -fsSL https://packagecontrol.io/Package Control.sublime-package)"
-#mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/ 
+#mkdir ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/
 curl "https://packagecontrol.io/Package Control.sublime-package" --output ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/"Package Control.sublime-package"
 
 echo "--> Creating package file for SublimeText .."
@@ -423,7 +422,14 @@ killall Finder
 # ################
 
 ### Mackup
-echo "--> Restoring settings via Mackup (iCloud) .." 
-mackup restore
+echo -n "--> Do you want to restore your config files and settings using Mackup? (y/n)"
+read answer
 
-echo "--> All done!"
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    echo "--> Restoring settings via Mackup (iCloud) .." 
+    mackup restore
+else
+    echo "--> Skipping Mackup restore .."
+fi
+
+echo "--> [orkish voice] JOBS DONE!! [/orkish voice]"
