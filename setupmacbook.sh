@@ -434,4 +434,4 @@ else
     echo "--> Skipping Mackup restore .."
 fi
 
-echo "--> [orkish voice] JOBS DONE!! [/orkish voice]"
+echo "--> JOB's DONE !!"
