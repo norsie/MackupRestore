@@ -120,6 +120,7 @@ echo "--> Installing Package Control for SublimeText .."
 curl "https://packagecontrol.io/Package Control.sublime-package" --output ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/"Package Control.sublime-package"
 
 echo "--> Creating package file for SublimeText .."
+[ ! -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/ ] && mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/
 cat <<EOF >~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/"Package Control.sublime-settings"
 {
 	"bootstrapped": true,
