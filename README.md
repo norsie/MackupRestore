@@ -25,6 +25,7 @@ Clean Macbook installation with Mackup restore
   - Lastpass
   - Slack
   - Caffeïne
+  - Snappy
   - Aerial screensaver
   - Mackup
   - Whatsapp
