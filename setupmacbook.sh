@@ -32,8 +32,17 @@ sudo xcodebuild -license accept
 brew cask install brave-browser
 brew cask install firefox
 
-# Python
+# Python 3
 brew install python
+
+# Python 2 & modules
+brew install python2
+pip install -U boto
+pip install pymongo
+pip install configparser
+pip install enum
+pip install prettytable
+pip install hurry.filesize
 
 # AWSCLI
 brew install awscli
