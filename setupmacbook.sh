@@ -34,6 +34,8 @@ brew cask install firefox
 
 # Python 3
 brew install python
+pip3 install boto3
+pip3 install requests
 
 # Python 2 & modules
 brew install python2
@@ -43,6 +45,7 @@ pip install configparser
 pip install enum
 pip install prettytable
 pip install hurry.filesize
+pip install requests
 
 # AWSCLI
 brew install awscli
