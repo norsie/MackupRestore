@@ -6,6 +6,8 @@ Clean Macbook installation with Mackup restore
 2. Hardlinking current settings- and config files to iCloud using Mackup (https://github.com/lra/mackup)
 3. Running a clean MacOS installation
 4. Logging into iCloud
+   > DON'T FORGET unticking the 'Optimise Mac Storage' function within the iCloud Drive options.
+     This function will rename certain files to _"file.ext.icloud"_ and mess up your 'Mackup Restore' (among other things).
 
 ### This script will Install the following tools and software:
 - Xcode
