@@ -17,7 +17,7 @@ fi
 
 # Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
+brew update && brew upgrade
 brew doctor
 brew tap homebrew/cask-versions
 
@@ -32,20 +32,21 @@ sudo xcodebuild -license accept
 brew cask install brave-browser
 brew cask install firefox
 
-# Python 3
-brew install python
+# Python 3 & modules
+brew install python3
 pip3 install boto3
 pip3 install requests
+sudo python3 -m pip install pymongo==3.8.0
 
 # Python 2 & modules
 brew install python2
-pip install -U boto
-pip install pymongo
-pip install configparser
-pip install enum
-pip install prettytable
-pip install hurry.filesize
-pip install requests
+pip2 install -U boto
+sudo python -m pip install pymongo==2.8.1
+pip2 install ConfigParser
+pip2 install enum
+pip2 install prettytable
+pip2 install hurry.filesize
+pip2 install requests
 
 # AWSCLI
 brew install awscli
@@ -124,7 +125,6 @@ directory = .config/mackup
 [applications_to_ignore]
 aws
 EOF
-
 
 ## Setup Package Controll & SublimeText
 ## Manually install Package Controll > https://packagecontrol.io/installation#st3
