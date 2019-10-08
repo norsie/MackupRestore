@@ -85,9 +85,6 @@ brew cask install slack
 echo "~~Slurp~~"
 brew cask install caffeine
 
-# Snappy
-brew cask install snappy
-
 # Aerial ScreenSaver
 brew cask install aerial
 
