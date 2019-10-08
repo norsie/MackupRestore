@@ -60,7 +60,7 @@ brew install packer
 # iTerm2
 brew cask install iterm2
 
-# OhMyZsh
+# Zsh
 brew install zsh
 
 # SublimeText editor
@@ -99,7 +99,8 @@ brew cask install whatsapp
 brew cask install plex-media-player
 brew cask install spotify
 brew cask install steam
-brew cask install vlc
+brew cask install discord
+# brew cask install vlc
 
 # Dropbox
 brew cask install dropbox
