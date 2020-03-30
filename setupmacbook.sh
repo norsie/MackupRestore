@@ -16,17 +16,19 @@ else
 fi
 
 # Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew update && brew upgrade
 brew doctor
 brew tap homebrew/cask-versions
 
 # App Store apps
 brew install mas
-mas install 497799835 # Xcode
-echo "--> Pointing xcode-select to the Xcode Developer directory .."
-sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-sudo xcodebuild -license accept
+
+# Xcode Developer
+#mas install 497799835 # Xcode
+#echo "--> Pointing xcode-select to the Xcode Developer directory .."
+#sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+#sudo xcodebuild -license accept
 
 # Browsers
 brew cask install brave-browser
@@ -430,8 +432,9 @@ defaults write com.apple.finder StandardViewSettings "{
     };
     SettingsType = StandardViewSettings;
 }"
-killall Finder
 
+# show directory path in Finder titlebar
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES;killall Finder
 
 # RESTORE Settings
 # ################
