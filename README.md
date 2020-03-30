@@ -26,15 +26,15 @@ Clean Macbook installation with Mackup restore
   - Yubico authenticator
   - Lastpass
   - Slack
-  - Caffeïne
+  # Caffeïne
   - Snappy
   - Aerial screensaver
   - Mackup
   - Whatsapp
-  - PLEX
+  # PLEX
   - Spotify
-  - Steam
-  - VLC
+  # Steam
+  # VLC
   - Dropbox
   - Logitech Options
  
