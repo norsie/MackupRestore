@@ -82,8 +82,8 @@ brew cask install lastpass
 brew cask install slack
 
 # Caffeine
-echo "~~Slurp~~"
-brew cask install caffeine
+# echo "~~Slurp~~"
+# brew cask install caffeine
 
 # Aerial ScreenSaver
 brew cask install aerial
@@ -96,9 +96,9 @@ brew install mackup
 brew cask install whatsapp
 
 # Media
-brew cask install plex-media-player
+# brew cask install plex-media-player
 brew cask install spotify
-brew cask install steam
+# brew cask install steam
 brew cask install discord
 # brew cask install vlc
 
