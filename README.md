@@ -17,6 +17,7 @@ Clean Macbook installation with Mackup restore
 - Homebrew
   - Brave Browser
   - Firefox
+  - Thunderbird
   - Python
   - AWSCLI
   - GIT
@@ -30,7 +31,6 @@ Clean Macbook installation with Mackup restore
   - Lastpass
   - Slack
   - #Caffeïne
-  - Snappy
   - Aerial screensaver
   - Mackup
   - Whatsapp
