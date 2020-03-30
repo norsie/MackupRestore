@@ -34,6 +34,9 @@ brew install mas
 brew cask install brave-browser
 brew cask install firefox
 
+# Mail client
+brew cask install thunderbird
+
 # Python 3 & modules
 brew install python3
 pip3 install boto3
