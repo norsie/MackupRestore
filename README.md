@@ -8,6 +8,8 @@ Clean Macbook installation with Mackup restore
 4. Logging into iCloud
    > DON'T FORGET unticking the 'Optimise Mac Storage' function within the iCloud Drive options.
      This function will rename certain files to _"file.ext.icloud"_ and mess up your 'mackup restore' (among other things).
+5. Run the script from you iCloud drive witin a terminal. 
+   > iCloud drive can be found here: `/Users/<username>/Library/Mobile\ Documents/com~apple~CloudDocs/`
 
 ### This script will Install the following tools and software:
 - Xcode
@@ -26,15 +28,15 @@ Clean Macbook installation with Mackup restore
   - Yubico authenticator
   - Lastpass
   - Slack
-  # Caffeïne
+  - #Caffeïne
   - Snappy
   - Aerial screensaver
   - Mackup
   - Whatsapp
-  # PLEX
+  - #PLEX
   - Spotify
-  # Steam
-  # VLC
+  - #Steam
+  - #VLC
   - Dropbox
   - Logitech Options
  
