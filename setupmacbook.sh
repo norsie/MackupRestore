@@ -57,7 +57,9 @@ pip2 install requests
 brew install awscli
 
 # GIT
-brew install git
+#brew install git
+# bug in newer git versions, where git clone/pull (via https helper) keeps asking for a username/password
+brew install git@2.24.0
 
 # Packer
 brew install packer
