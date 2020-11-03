@@ -9,7 +9,7 @@ Clean Macbook installation with Mackup restore
    > DON'T FORGET unticking the 'Optimise Mac Storage' function within the iCloud Drive options.
      This function will rename certain files to _"file.ext.icloud"_ and mess up your 'mackup restore' (among other things).
      AND tick the 'Desktop & Documents Folders' option, otherwise you won't be able to find the Mackup repo in your iCloud.
-5. Run the Mackup script from your iCloud drive witin a terminal. 
+5. Run the 'setupmacbook.sh' script from your iCloud drive witin a terminal. 
    > iCloud drive directory can be found here: `/Users/<username>/Library/Mobile\ Documents/com~apple~CloudDocs/`
 
 ### This script will Install the following tools and software:
