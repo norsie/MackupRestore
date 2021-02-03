@@ -15,8 +15,15 @@ else
     echo "--> Skipping key generation .."
 fi
 
-# Homebrew
+# Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+# Add Homebrew to your PATH in /Users/<user>/.zprofile:
+# (!! CHANGE <USER> to your own !!)
+    echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> /Users/denneg/.zprofile
+    eval $(/opt/homebrew/bin/brew shellenv)
+
+# Update & fix Homebrew
 brew update && brew upgrade
 brew doctor
 brew tap homebrew/cask-versions
