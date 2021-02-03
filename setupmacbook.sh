@@ -32,10 +32,10 @@ brew tap homebrew/cask-versions
 brew install mas
 
 # Xcode Developer
-#mas install 497799835 # Xcode
-#echo "--> Pointing xcode-select to the Xcode Developer directory .."
-#sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-#sudo xcodebuild -license accept
+mas install 497799835 # Xcode
+echo "--> Pointing xcode-select to the Xcode Developer directory .."
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+sudo xcodebuild -license accept
 
 # Browsers
 brew install brave-browser
