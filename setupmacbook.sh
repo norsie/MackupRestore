@@ -31,11 +31,11 @@ brew install mas
 #sudo xcodebuild -license accept
 
 # Browsers
-brew cask install brave-browser
-brew cask install firefox
+brew install brave-browser
+brew install firefox
 
 # Mail client
-brew cask install thunderbird
+#brew install thunderbird
 
 # Python 3 & modules
 brew install python3
@@ -44,14 +44,14 @@ pip3 install requests
 sudo python3 -m pip install pymongo==3.8.0
 
 # Python 2 & modules
-brew install python2
-pip2 install -U boto
-sudo python -m pip install pymongo==2.8.1
-pip2 install ConfigParser
-pip2 install enum
-pip2 install prettytable
-pip2 install hurry.filesize
-pip2 install requests
+#brew install python2
+#pip2 install -U boto
+#sudo python -m pip install pymongo==2.8.1
+#pip2 install ConfigParser
+#pip2 install enum
+#pip2 install prettytable
+#pip2 install hurry.filesize
+#pip2 install requests
 
 # AWSCLI
 brew install awscli
@@ -59,61 +59,63 @@ brew install awscli
 # GIT
 #brew install git
 # bug in newer git versions, where git clone/pull (via https helper) keeps asking for a username/password
-brew install git@2.24.0
+# brew install git@2.24.0
+brew install git
 
 # Packer
 brew install packer
 
 # iTerm2
-brew cask install iterm2
+brew install iterm2
 
 # Zsh
 brew install zsh
 
 # SublimeText editor
-brew cask install sublime-text
+brew install sublime-text
 
 # Boostnote
-brew cask install boostnote
+brew install boostnote
 
 # Authy authenticator
-brew cask install authy
+brew install authy
 
 # Yubico authenticator
-brew cask install homebrew/cask-drivers/yubico-authenticator
+brew install homebrew/cask-drivers/yubico-authenticator
 
 # Lastpass
-brew cask install lastpass
+#brew cask install lastpass
 
 # Slack
-brew cask install slack
+brew install slack
 
 # Caffeine
-# echo "~~Slurp~~"
-# brew cask install caffeine
+echo "~~Slurp~~"
+brew install caffeine
 
 # Aerial ScreenSaver
-brew cask install aerial
+brew install aerial
 
 # Mackup
 # README > https://github.com/lra/mackup#quickstart
 brew install mackup
 
 # Whatsapp
-brew cask install whatsapp
+brew install whatsapp
 
 # Media
 # brew cask install plex-media-player
-brew cask install spotify
-# brew cask install steam
-brew cask install discord
+brew install spotify
+brew install steam
+brew install discord
+brew cask install signal
 # brew cask install vlc
 
 # Dropbox
-brew cask install dropbox
+brew install dropbox
 
 # Logitech Options
-brew cask install homebrew/cask-drivers/logitech-options
+#brew cask install homebrew/cask-drivers/logitech-options
 
 
 # CONFIGURATION
@@ -243,200 +245,200 @@ git clone https://bitbucket.org/mvanbaak/dotfiles.zsh.git ~/.zsh
 
 
 ## Setup Finder
-echo "--> setting up Finder layout .."
-defaults write com.apple.finder ShowStatusBar -bool TRUE
-defaults write com.apple.finder ShowPathbar -bool TRUE
-defaults write com.apple.finder ShowSidebar -bool TRUE
-defaults write com.apple.finder ShowHardDrivesOnDesktop -bool TRUE
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool TRUE
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool TRUE
-defaults write com.apple.finder NewWindowTarget PfHm
-defaults write com.apple.finder NewWindowTargetPath file://$HOME
-defaults write com.apple.finder DesktopViewSettings "{
-    IconViewSettings =     {
-        arrangeBy = name;
-        backgroundColorBlue = 1;
-        backgroundColorGreen = 1;
-        backgroundColorRed = 1;
-        backgroundType = 0;
-        gridOffsetX = 0;
-        gridOffsetY = 0;
-        gridSpacing = 85;
-        iconSize = 64;
-        labelOnBottom = 0;
-        showIconPreview = 1;
-        showItemInfo = 1;
-        textSize = 12;
-        viewOptionsVersion = 1;
-    };
-}"
-defaults write com.apple.finder StandardViewSettings "{
-    ExtendedListViewSettingsV2 =     {
-        calculateAllSizes = 0;
-        columns =         (
-                        {
-                ascending = 1;
-                identifier = name;
-                visible = 1;
-                width = 300;
-            },
-                        {
-                ascending = 0;
-                identifier = ubiquity;
-                visible = 0;
-                width = 35;
-            },
-                        {
-                ascending = 0;
-                identifier = dateModified;
-                visible = 1;
-                width = 181;
-            },
-                        {
-                ascending = 0;
-                identifier = dateCreated;
-                visible = 0;
-                width = 181;
-            },
-                        {
-                ascending = 0;
-                identifier = size;
-                visible = 1;
-                width = 97;
-            },
-                        {
-                ascending = 1;
-                identifier = kind;
-                visible = 1;
-                width = 115;
-            },
-                        {
-                ascending = 1;
-                identifier = label;
-                visible = 0;
-                width = 100;
-            },
-                        {
-                ascending = 1;
-                identifier = version;
-                visible = 0;
-                width = 75;
-            },
-                        {
-                ascending = 1;
-                identifier = comments;
-                visible = 0;
-                width = 300;
-            },
-                        {
-                ascending = 0;
-                identifier = dateLastOpened;
-                visible = 0;
-                width = 200;
-            },
-                        {
-                ascending = 0;
-                identifier = dateAdded;
-                visible = 0;
-                width = 181;
-            }
-        );
-        iconSize = 16;
-        showIconPreview = 1;
-        sortColumn = name;
-        textSize = 12;
-        useRelativeDates = 1;
-        viewOptionsVersion = 1;
-    };
-    GalleryViewSettings =     {
-        arrangeBy = name;
-        iconSize = 48;
-        showIconPreview = 1;
-        viewOptionsVersion = 1;
-    };
-    IconViewSettings =     {
-        arrangeBy = none;
-        backgroundColorBlue = 1;
-        backgroundColorGreen = 1;
-        backgroundColorRed = 1;
-        backgroundType = 0;
-        gridOffsetX = 0;
-        gridOffsetY = 0;
-        gridSpacing = 54;
-        iconSize = 64;
-        labelOnBottom = 1;
-        showIconPreview = 1;
-        showItemInfo = 0;
-        textSize = 12;
-        viewOptionsVersion = 1;
-    };
-    ListViewSettings =     {
-        calculateAllSizes = 0;
-        columns =         {
-            comments =             {
-                ascending = 1;
-                index = 7;
-                visible = 0;
-                width = 300;
-            };
-            dateCreated =             {
-                ascending = 0;
-                index = 2;
-                visible = 0;
-                width = 181;
-            };
-            dateLastOpened =             {
-                ascending = 0;
-                index = 8;
-                visible = 0;
-                width = 200;
-            };
-            dateModified =             {
-                ascending = 0;
-                index = 1;
-                visible = 1;
-                width = 181;
-            };
-            kind =             {
-                ascending = 1;
-                index = 4;
-                visible = 1;
-                width = 115;
-            };
-            label =             {
-                ascending = 1;
-                index = 5;
-                visible = 0;
-                width = 100;
-            };
-            name =             {
-                ascending = 1;
-                index = 0;
-                visible = 1;
-                width = 300;
-            };
-            size =             {
-                ascending = 0;
-                index = 3;
-                visible = 1;
-                width = 97;
-            };
-            version =             {
-                ascending = 1;
-                index = 6;
-                visible = 0;
-                width = 75;
-            };
-        };
-        iconSize = 16;
-        showIconPreview = 1;
-        sortColumn = name;
-        textSize = 12;
-        useRelativeDates = 1;
-        viewOptionsVersion = 1;
-    };
-    SettingsType = StandardViewSettings;
-}"
+# echo "--> setting up Finder layout .."
+# defaults write com.apple.finder ShowStatusBar -bool TRUE
+# defaults write com.apple.finder ShowPathbar -bool TRUE
+# defaults write com.apple.finder ShowSidebar -bool TRUE
+# defaults write com.apple.finder ShowHardDrivesOnDesktop -bool TRUE
+# defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool TRUE
+# defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool TRUE
+# defaults write com.apple.finder NewWindowTarget PfHm
+# defaults write com.apple.finder NewWindowTargetPath file://$HOME
+# defaults write com.apple.finder DesktopViewSettings "{
+#     IconViewSettings =     {
+#         arrangeBy = name;
+#         backgroundColorBlue = 1;
+#         backgroundColorGreen = 1;
+#         backgroundColorRed = 1;
+#         backgroundType = 0;
+#         gridOffsetX = 0;
+#         gridOffsetY = 0;
+#         gridSpacing = 85;
+#         iconSize = 64;
+#         labelOnBottom = 0;
+#         showIconPreview = 1;
+#         showItemInfo = 1;
+#         textSize = 12;
+#         viewOptionsVersion = 1;
+#     };
+# }"
+# defaults write com.apple.finder StandardViewSettings "{
+#     ExtendedListViewSettingsV2 =     {
+#         calculateAllSizes = 0;
+#         columns =         (
+#                         {
+#                 ascending = 1;
+#                 identifier = name;
+#                 visible = 1;
+#                 width = 300;
+#             },
+#                         {
+#                 ascending = 0;
+#                 identifier = ubiquity;
+#                 visible = 0;
+#                 width = 35;
+#             },
+#                         {
+#                 ascending = 0;
+#                 identifier = dateModified;
+#                 visible = 1;
+#                 width = 181;
+#             },
+#                         {
+#                 ascending = 0;
+#                 identifier = dateCreated;
+#                 visible = 0;
+#                 width = 181;
+#             },
+#                         {
+#                 ascending = 0;
+#                 identifier = size;
+#                 visible = 1;
+#                 width = 97;
+#             },
+#                         {
+#                 ascending = 1;
+#                 identifier = kind;
+#                 visible = 1;
+#                 width = 115;
+#             },
+#                         {
+#                 ascending = 1;
+#                 identifier = label;
+#                 visible = 0;
+#                 width = 100;
+#             },
+#                         {
+#                 ascending = 1;
+#                 identifier = version;
+#                 visible = 0;
+#                 width = 75;
+#             },
+#                         {
+#                 ascending = 1;
+#                 identifier = comments;
+#                 visible = 0;
+#                 width = 300;
+#             },
+#                         {
+#                 ascending = 0;
+#                 identifier = dateLastOpened;
+#                 visible = 0;
+#                 width = 200;
+#             },
+#                         {
+#                 ascending = 0;
+#                 identifier = dateAdded;
+#                 visible = 0;
+#                 width = 181;
+#             }
+#         );
+#         iconSize = 16;
+#         showIconPreview = 1;
+#         sortColumn = name;
+#         textSize = 12;
+#         useRelativeDates = 1;
+#         viewOptionsVersion = 1;
+#     };
+#     GalleryViewSettings =     {
+#         arrangeBy = name;
+#         iconSize = 48;
+#         showIconPreview = 1;
+#         viewOptionsVersion = 1;
+#     };
+#     IconViewSettings =     {
+#         arrangeBy = none;
+#         backgroundColorBlue = 1;
+#         backgroundColorGreen = 1;
+#         backgroundColorRed = 1;
+#         backgroundType = 0;
+#         gridOffsetX = 0;
+#         gridOffsetY = 0;
+#         gridSpacing = 54;
+#         iconSize = 64;
+#         labelOnBottom = 1;
+#         showIconPreview = 1;
+#         showItemInfo = 0;
+#         textSize = 12;
+#         viewOptionsVersion = 1;
+#     };
+#     ListViewSettings =     {
+#         calculateAllSizes = 0;
+#         columns =         {
+#             comments =             {
+#                 ascending = 1;
+#                 index = 7;
+#                 visible = 0;
+#                 width = 300;
+#             };
+#             dateCreated =             {
+#                 ascending = 0;
+#                 index = 2;
+#                 visible = 0;
+#                 width = 181;
+#             };
+#             dateLastOpened =             {
+#                 ascending = 0;
+#                 index = 8;
+#                 visible = 0;
+#                 width = 200;
+#             };
+#             dateModified =             {
+#                 ascending = 0;
+#                 index = 1;
+#                 visible = 1;
+#                 width = 181;
+#             };
+#             kind =             {
+#                 ascending = 1;
+#                 index = 4;
+#                 visible = 1;
+#                 width = 115;
+#             };
+#             label =             {
+#                 ascending = 1;
+#                 index = 5;
+#                 visible = 0;
+#                 width = 100;
+#             };
+#             name =             {
+#                 ascending = 1;
+#                 index = 0;
+#                 visible = 1;
+#                 width = 300;
+#             };
+#             size =             {
+#                 ascending = 0;
+#                 index = 3;
+#                 visible = 1;
+#                 width = 97;
+#             };
+#             version =             {
+#                 ascending = 1;
+#                 index = 6;
+#                 visible = 0;
+#                 width = 75;
+#             };
+#         };
+#         iconSize = 16;
+#         showIconPreview = 1;
+#         sortColumn = name;
+#         textSize = 12;
+#         useRelativeDates = 1;
+#         viewOptionsVersion = 1;
+#     };
+#     SettingsType = StandardViewSettings;
+# }"
 
 # show directory path in Finder titlebar
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES;killall Finder
