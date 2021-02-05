@@ -16,6 +16,7 @@ else
 fi
 
 # Install Homebrew
+echo "--> Installing Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Add Homebrew to your PATH in /Users/<user>/.zprofile:
@@ -29,15 +30,17 @@ brew doctor
 brew tap homebrew/cask-versions
 
 # App Store apps
-brew install mas
+#brew install mas
 
 # Xcode Developer
-mas install 497799835 # Xcode
-echo "--> Pointing xcode-select to the Xcode Developer directory .."
-sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-sudo xcodebuild -license accept
+# INSTALL MANUALLY BEFORE RUNNING THIS SCRIPT!!
+# mas install 497799835 # Xcode
+# echo "--> Pointing xcode-select to the Xcode Developer directory .."
+# sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+# sudo xcodebuild -license accept
 
 # Browsers
+echo "--> Installing browsers" 
 brew install brave-browser
 brew install firefox
 
@@ -45,12 +48,14 @@ brew install firefox
 #brew install thunderbird
 
 # Python 3 & modules
+echo "--> Installing Python3" 
 brew install python3
 pip3 install boto3
 pip3 install requests
 sudo python3 -m pip install pymongo==3.8.0
 
 # Python 2 & modules
+# DEPRECATED!!
 #brew install python2
 #pip2 install -U boto
 #sudo python -m pip install pymongo==2.8.1
@@ -61,68 +66,92 @@ sudo python3 -m pip install pymongo==3.8.0
 #pip2 install requests
 
 # AWSCLI
+echo "--> Installing AWSCLI"
 brew install awscli
 
 # GIT
-#brew install git
 # bug in newer git versions, where git clone/pull (via https helper) keeps asking for a username/password
 # brew install git@2.24.0
+echo "--> Installing Git"
 brew install git
 
 # Packer
+echo "--> Installing Packer"
 brew install packer
 
 # iTerm2
+echo "--> Installing iTerm2"
 brew install iterm2
 
 # Zsh
+echo "--> Installing Zsh"
 brew install zsh
 
 # SublimeText editor
+echo "--> Installing SublimeText"
 brew install sublime-text
 
 # Boostnote
+echo "--> Installing Boostnote"
 brew install boostnote
 
 # Authy authenticator
+echo "--> Installing Authy"
 brew install authy
 
 # Yubico authenticator
-brew install homebrew/cask-drivers/yubico-authenticator
+echo "--> Installing Yubico"
+brew install yubico-authenticator
 
 # Lastpass
-#brew cask install lastpass
+echo "--> Installing Lastpass"
+brew install lastpass
 
 # Slack
+echo "--> Installing Slack"
 brew install slack
 
 # Caffeine
+echo "--> Installing Caffeine"
 echo "~~Slurp~~"
 brew install caffeine
 
 # Aerial ScreenSaver
+echo "--> Installing Aerial"
 brew install aerial
 
 # Mackup
 # README > https://github.com/lra/mackup#quickstart
+echo "--> Installing Mackup"
 brew install mackup
 
 # Whatsapp
+echo "--> Installing WhatsApp"
 brew install whatsapp
 
 # Media
-# brew cask install plex-media-player
+# echo "--> Installing Plex"
+# brew install plex-media-player
+
+echo "--> Installing Spotify"
 brew install spotify
+
+echo "--> Installing Steam"
 brew install steam
+
+echo "--> Installing Discord"
 brew install discord
-brew cask install signal
-# brew cask install vlc
+
+echo "--> Installing Signal"
+brew install signal
 
 # Dropbox
+echo "--> Installing Dropbox"
 brew install dropbox
 
 # Logitech Options
-#brew cask install homebrew/cask-drivers/logitech-options
+echo "--> Installing Logitech Options"
+#brew install logitech-options
 
 
 # CONFIGURATION
@@ -448,6 +477,7 @@ git clone https://bitbucket.org/mvanbaak/dotfiles.zsh.git ~/.zsh
 # }"
 
 # show directory path in Finder titlebar
+echo "--> Showing directory pahh in Finder titlebar.." 
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES;killall Finder
 
 # RESTORE Settings
